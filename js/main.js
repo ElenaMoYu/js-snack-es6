@@ -44,8 +44,6 @@ const capitalDisney = toLowerCase.map(capitalizeFirstLetter);
 
 console.log(capitalDisney);
 
-
-
 // Snack 3
 // Crea un array di oggetti che rappresentano degli animali. Ogni animale ha un nome, una famiglia e una classe.
 // Es: [ { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
@@ -72,32 +70,39 @@ const animals = [
   },
 ];
 
-const mammals = [{
-      class: "mammals"
-}]
-console.log(
+const mammiferi = animals.filter((auto) => auto.class === "mammals");
 
-// // Snack 4
-// // Crea un array di oggetti che rappresentano delle persone.
-// // Ogni persona ha un nome, un cognome e un'età.
+console.log(mammiferi);
 
-// // Partendo da questo, crea quindi un nuovo array inserendo, per ogni persona, una frase (stringa) con il nome e cognome
-// //  e l'indicazione se può guidare, in base all'età.
+// Snack 4
+// Crea un array di oggetti che rappresentano delle persone. Ogni persona ha un nome, un cognome e un'età. Partendo da questo,
+// crea quindi un nuovo array inserendo, per ogni persona, una frase (stringa) con il nome e cognome e l'indicazione se può guidare, in base all'età.
 
-// const people = [
-//   {
-//     name: "Lisa",
-//     lastname: "Dummy",
-//     age: "40",
+const people = [
+  {
+    name: "Lisa",
+    lastname: "Dummy",
+    age: 40,
+  },
+  {
+    name: "Marie",
+    lastname: "Dummy",
+    age: 30,
+  },
+  {
+    name: "John",
+    lastname: "Dummy",
+    age: 16,
+  },
+];
 
-//   }{
-//     name: "Marie",
-//     lastname: "Dummy",
-//     age: "30",
-//   },
-//   {
-//       name: "John",
-//       lastname: "Dummy",
-//       age: "16",
-//   },
-// ];
+function canDrive(person) {
+  if (person.age > 17) {
+    return `${person.name} ${person.lastname} can drive`;
+  } else {
+    return `${person.name} ${person.lastname} cant drive`;
+  }
+}
+
+const drivingStatus = people.map(canDrive);
+console.log(drivingStatus);
