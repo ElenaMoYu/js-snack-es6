@@ -33,46 +33,49 @@ console.log(otherCars);
 
 const disney = ["scar", "MULAN", "jafar", "pIpPo", "Ajeje"];
 
+let toLowerCase = disney.map((word) => word.toLowerCase());
 
-
-function capitalLetter(word){
-      const inizioLettera = disneyLowercase.at(0)
-      const res {inizioLettera.}
+function capitalizeFirstLetter(word) {
+  const res = word.at(0).toUpperCase() + word.slice(1);
+  return res;
 }
 
-// // Snack 3
-// // Crea un array di oggetti che rappresentano degli animali.
-// // Ogni animale ha un nome, una famiglia e una classe.
-// // Es:
-// // [
-// //   { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
-// //   { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
-// //   { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
-// // ]
-// // Crea un nuovo array con la lista dei mammiferi.
+const capitalDisney = toLowerCase.map(capitalizeFirstLetter);
 
-// const animals = [
-//   {
-//     name: "lion",
-//     family: "feline",
-//     class: "mammals",
-//   },
-//   {
-//     name: "dog",
-//     family: "canines",
-//     class: "mammals",
-//   },
-//   {
-//     name: "hen",
-//     family: "aves",
-//     class: "birds",
-//   },
-// ];
+console.log(capitalDisney);
 
-// const mammals = [{
-//       class: "mammals"
-// }]
-// console.log(
+
+
+// Snack 3
+// Crea un array di oggetti che rappresentano degli animali. Ogni animale ha un nome, una famiglia e una classe.
+// Es: [ { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+//       { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+//       { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+//      ]
+// Crea un nuovo array con la lista dei mammiferi.
+
+const animals = [
+  {
+    name: "lion",
+    family: "feline",
+    class: "mammals",
+  },
+  {
+    name: "dog",
+    family: "canines",
+    class: "mammals",
+  },
+  {
+    name: "hen",
+    family: "aves",
+    class: "birds",
+  },
+];
+
+const mammals = [{
+      class: "mammals"
+}]
+console.log(
 
 // // Snack 4
 // // Crea un array di oggetti che rappresentano delle persone.
